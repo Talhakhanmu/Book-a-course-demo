@@ -6,6 +6,6 @@
 
 ## Age barrier error as well.
 
-## JavaScript i have imported from internet and modified it as i wanted
+## JavaScript i have imported from internet and modified it as i wanted.
 
-##
+## css and html i totally self written without help of someone or internet.
