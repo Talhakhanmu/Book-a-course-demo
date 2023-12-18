@@ -1,0 +1,345 @@
+/* General CSS for the project layout */
+
+body {
+  height: 1050px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/Pictures/Mask\ group.svg");
+}
+
+.logo {
+  height: 200px;
+  width: 100%;
+  background-image: url("/Pictures/1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    height: 150px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .offer {
+    width: 90%;
+    max-width: 291px;
+    height: 353px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    height: 300px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Start page */
+  .offer {
+    width: 291px;
+    height: 353px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(255, 81, 0);
+    margin: 20px;
+  }
+}
+
+.text-heading {
+  color: #000;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.text-describe {
+  padding-top: 30px;
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 135px;
+}
+
+.course-detail-1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.course-details-2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.online {
+  display: flex;
+  width: 35px;
+  height: 6px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #ffbf5e;
+  color: white;
+}
+.session {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.session-box {
+  display: flex;
+  flex-direction: column;
+  align-items: last baseline;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.jetzt-bewerben {
+  display: flex;
+  width: 280px;
+  height: 27px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #fd6f3c;
+  left: 23px;
+  bottom: 17px;
+  box-shadow: 0 4px 8px rgb(255, 81, 0);
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.button {
+  width: 291px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0%;
+}
+
+/* End page */
+
+.Succesful {
+  padding-top: 100px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #f0f0f0;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-page2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Button-endpage {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #145364;
+  box-shadow: 0 4px 8px rgb(255, 81, 0);
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.button-endpage-box {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  margin: 0%;
+}
+
+/* Form page */
+
+.felder {
+  display: flex;
+  height: 20px;
+  padding: 0px 0px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid #909090;
+  background: #fffcfc;
+}
+
+.div-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8px;
+  /* flex-grow: 1; */
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .div-form {
+    flex-direction: column;
+  }
+}
+.felder-1 {
+  display: flex;
+  height: 50px;
+  padding: 10px 0;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid #909090;
+  background: #fffcfc;
+  margin-top: 5px;
+}
+.Button-formpage {
+  width: 100%;
+  max-width: 1000px;
+  height: 40px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #145364;
+  box-shadow: 0 4px 8px rgb(255, 81, 0);
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.Button-Cancle {
+  width: 100%;
+  max-width: 1000px;
+  height: 40px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: #ff1e00;
+  box-shadow: 0 4px 8px rgb(255, 81, 0);
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 25px;
+}
+
+.error-feld {
+  color: #000000;
+  font-size: large;
+  font-weight: bolder;
+  border: 1px solid gray;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.65);
+  margin-top: 2px;
+}
+.uberschriften {
+  display: block;
+  align-self: stretch;
+  color: #000000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 20px;
+}
+
+.blend {
+  display: none;
+  align-self: stretch;
+  color: #ff0000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+}
+.feld {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #ffffff55;
+  padding: 10%;
+  box-shadow: 0 4px 8px rgb(105, 105, 105);
+  border-radius: 10px;
+}

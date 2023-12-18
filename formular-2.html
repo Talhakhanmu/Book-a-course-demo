@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+    </header>
+    <form action="EndPage.html" onsubmit="return false">
+      <main>
+        <div class="feld">
+          <label class="uberschriften" for="email">E-Mail-Adresse:</label>
+          <input
+            class="felder"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@example.com"
+          />
+          <div class="blend error" id="emailError">
+            &#9888; Please enter a valid email address
+          </div>
+
+          <label class="uberschriften" for="phone">Telefonnummer:</label>
+          <input
+            class="felder"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="123-456-7890"
+          />
+          <div class="blend error" id="phoneError">
+            &#9888; Please enter a valid phone number
+          </div>
+
+          <label for="subscribeCheckbox">
+            <div class="uberschriften">
+              Ich möchte den Newsletter abonnieren
+            </div>
+            <input
+              type="checkbox"
+              id="subscribeCheckbox"
+              name="subscribe"
+              value="subscribe"
+            />
+          </label>
+
+          <label for="Bemerkung" class="uberschriften">Bemerkung </label>
+          <textarea
+            class="felder-1"
+            name="Bemerkung"
+            id="Bemerkung"
+            placeholder="Geben Sie hier Ihre Bemerkungen ein..."
+            maxlength="500"
+          ></textarea>
+
+          <button
+            type="button"
+            class="Button-formpage"
+            id="button-2"
+            onclick="validateForm()"
+          >
+            Absenden
+          </button>
+
+          <button class="Button-Cancle" id="button-1">
+            <a href="index.html" style="text-decoration: none; color: white"
+              >Abbrechen</a
+            >
+          </button>
+        </div>
+      </main>
+    </form>
+    <script>
+      function validateForm() {
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+
+        var emailError = document.getElementById("emailError");
+        var phoneError = document.getElementById("phoneError");
+
+        emailError.style.display = "none";
+        phoneError.style.display = "none";
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          emailError.style.display = "block";
+        }
+
+        if (phone.trim() === "") {
+          phoneError.style.display = "block";
+        }
+
+        if (
+          emailError.style.display === "none" &&
+          phoneError.style.display === "none"
+        ) {
+          window.location.href = "EndPage.html";
+        }
+      }
+    </script>
+  </body>
+</html>

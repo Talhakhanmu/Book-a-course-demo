@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+    </header>
+    <form>
+      <main>
+        <div class="feld">
+          <div>
+            <label for="Anrede" class="uberschriften">Anrede</label>
+          </div>
+
+          <select class="felder" id="Anrede" name="Anrede">
+            <option value="mr">Herr</option>
+            <option value="ms">Frau</option>
+            <option value="other">andere</option>
+          </select>
+
+          <!-- First name error -->
+
+          <div>
+            <label for="firstName" class="uberschriften">Vorname</label>
+          </div>
+          <div class="blend error" id="firstNameError">
+            &#9888; Bitte einen gültigen Namen eingeben
+          </div>
+          <input
+            class="felder"
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="Vorname"
+          />
+
+          <!-- Last name error -->
+
+          <div>
+            <label for="lastName" class="uberschriften">Nachname</label>
+          </div>
+          <div class="blend error" id="lastNameError">
+            &#9888; Bitte einen gültigen Namen eingeben
+          </div>
+          <input
+            class="felder"
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Nachname"
+          />
+
+          <!-- Birthdate error -->
+
+          <div>
+            <label class="uberschriften" for="birthdate">Geburtsdatum</label>
+          </div>
+          <div class="blend error" id="birthdateError">
+            &#9888;Sie müssen mindestens 18 Jahre alt sein
+          </div>
+
+          <input class="felder" type="date" id="birthdate" name="birthdate" />
+
+          <!-- Strasse error -->
+
+          <div>
+            <label class="uberschriften" for="strasse">Strasse</label>
+          </div>
+          <div class="blend error" id="strasseError">
+            &#9888; Bitte geben Sie eine gültige Strasse
+          </div>
+          <input
+            class="felder"
+            type="text"
+            name="strasse"
+            id="strasse"
+            placeholder="Strasse"
+          />
+
+          <!-- PLZ error -->
+
+          <div>
+            <label class="uberschriften" for="plz">PLZ</label>
+          </div>
+          <div class="blend error" id="plzError">&#9888;Pflichtfeld</div>
+
+          <input
+            style="width: 100%"
+            class="felder"
+            type="text"
+            id="plz"
+            name="plz"
+            maxlength="5"
+          />
+
+          <!-- Ort error -->
+          <div>
+            <label class="uberschriften" for="Ort">Ort</label>
+          </div>
+          <div class="blend error" id="ortError">&#9888;Pflichtfeld</div>
+
+          <input
+            style="width: 100%"
+            class="felder"
+            type="text"
+            id="Ort"
+            name="Ort"
+            list="citySuggestions"
+          />
+          <datalist id="citySuggestions">
+            <option value="Zurich"></option>
+            <option value="Geneva"></option>
+            <option value="Bern"></option>
+            <option value="Basel"></option>
+            <option value="Schwyz"></option>
+            <option value="Tessin"></option>
+            <option value="Basel"></option>
+          </datalist>
+
+          <button
+            type="button"
+            class="Button-formpage"
+            id="button-2"
+            onclick="validateForm()"
+          >
+            Weiter
+          </button>
+
+          <div>
+            <button class="Button-Cancle" id="button-1">
+              <a href="index.html" style="text-decoration: none; color: white"
+                >Abbrechen</a
+              >
+            </button>
+          </div>
+        </div>
+      </main>
+    </form>
+    <script>
+      function validateForm() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var birthdate = document.getElementById("birthdate").value;
+        var strasse = document.getElementById("strasse").value;
+        var plz = document.getElementById("plz").value;
+        var ort = document.getElementById("Ort").value;
+
+        var firstNameError = document.getElementById("firstNameError");
+        var lastNameError = document.getElementById("lastNameError");
+        var birthdateError = document.getElementById("birthdateError");
+        var strasseError = document.getElementById("strasseError");
+        var plzError = document.getElementById("plzError");
+        var ortError = document.getElementById("ortError");
+
+        firstNameError.style.display = "none";
+        lastNameError.style.display = "none";
+        birthdateError.style.display = "none";
+        strasseError.style.display = "none";
+        plzError.style.display = "none";
+        ortError.style.display = "none";
+
+        if (firstName === "") {
+          firstNameError.style.display = "block";
+        }
+
+        if (lastName === "") {
+          lastNameError.style.display = "block";
+        }
+
+        var birthdateObj = new Date(birthdate);
+        var currentDate = new Date();
+        var age = currentDate.getFullYear() - birthdateObj.getFullYear();
+
+        if (age < 18) {
+          birthdateError.style.display = "block";
+        }
+
+        if (strasse === "") {
+          strasseError.style.display = "block";
+        }
+
+        if (plz === "") {
+          plzError.style.display = "block";
+        }
+
+        if (ort === "") {
+          ortError.style.display = "block";
+        }
+
+        if (
+          firstName !== "" &&
+          lastName !== "" &&
+          age >= 18 &&
+          strasse !== "" &&
+          plz !== "" &&
+          ort !== ""
+        ) {
+          window.location.href = "formular-2.html";
+        }
+      }
+    </script>
+  </body>
+</html>
