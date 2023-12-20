@@ -20,16 +20,17 @@
           <select class="felder" id="Anrede" name="Anrede">
             <option value="mr">Herr</option>
             <option value="ms">Frau</option>
-            <option value="other">andere</option>
+            <option value="other">Andere</option>
           </select>
 
           <!-- First name error -->
-
-          <div>
-            <label for="firstName" class="uberschriften">Vorname</label>
-          </div>
-          <div class="blend error" id="firstNameError">
-            &#9888; Bitte einen gültigen Namen eingeben
+          <div class="flex-box">
+            <div>
+              <label for="firstName" class="uberschriften">Vorname</label>
+            </div>
+            <div class="blend error" id="firstNameError">
+              &#9888; Bitte eingeben
+            </div>
           </div>
           <input
             class="felder"
@@ -40,12 +41,13 @@
           />
 
           <!-- Last name error -->
-
-          <div>
-            <label for="lastName" class="uberschriften">Nachname</label>
-          </div>
-          <div class="blend error" id="lastNameError">
-            &#9888; Bitte einen gültigen Namen eingeben
+          <div class="flex-box">
+            <div>
+              <label for="lastName" class="uberschriften">Nachname</label>
+            </div>
+            <div class="blend error" id="lastNameError">
+              &#9888; Bitte eingeben
+            </div>
           </div>
           <input
             class="felder"
@@ -56,23 +58,25 @@
           />
 
           <!-- Birthdate error -->
-
-          <div>
-            <label class="uberschriften" for="birthdate">Geburtsdatum</label>
-          </div>
-          <div class="blend error" id="birthdateError">
-            &#9888;Sie müssen mindestens 18 Jahre alt sein
+          <div class="flex-box">
+            <div>
+              <label class="uberschriften" for="birthdate">Geburtsdatum</label>
+            </div>
+            <div class="blend error" id="birthdateError">
+              &#9888; mindestens 18 Jahre alt
+            </div>
           </div>
 
           <input class="felder" type="date" id="birthdate" name="birthdate" />
 
           <!-- Strasse error -->
-
-          <div>
-            <label class="uberschriften" for="strasse">Strasse</label>
-          </div>
-          <div class="blend error" id="strasseError">
-            &#9888; Bitte geben Sie eine gültige Strasse
+          <div class="flex-box">
+            <div>
+              <label class="uberschriften" for="strasse">Strasse</label>
+            </div>
+            <div class="blend error" id="strasseError">
+              &#9888; Bitte eingeben
+            </div>
           </div>
           <input
             class="felder"
@@ -83,12 +87,12 @@
           />
 
           <!-- PLZ error -->
-
-          <div>
-            <label class="uberschriften" for="plz">PLZ</label>
+          <div class="flex-box">
+            <div>
+              <label class="uberschriften" for="plz">PLZ</label>
+            </div>
+            <div class="blend error" id="plzError">&#9888;Pflichtfeld</div>
           </div>
-          <div class="blend error" id="plzError">&#9888;Pflichtfeld</div>
-
           <input
             style="width: 100%"
             class="felder"
@@ -99,11 +103,12 @@
           />
 
           <!-- Ort error -->
-          <div>
-            <label class="uberschriften" for="Ort">Ort</label>
+          <div class="flex-box">
+            <div>
+              <label class="uberschriften" for="Ort">Ort</label>
+            </div>
+            <div class="blend error" id="ortError">&#9888;Pflichtfeld</div>
           </div>
-          <div class="blend error" id="ortError">&#9888;Pflichtfeld</div>
-
           <input
             style="width: 100%"
             class="felder"
@@ -132,11 +137,13 @@
           </button>
 
           <div>
-            <button class="Button-Cancle" id="button-1">
-              <a href="index.html" style="text-decoration: none; color: white"
-                >Abbrechen</a
-              >
-            </button>
+            <a
+              class="Button-Cancle"
+              id="button-1"
+              href="index.html"
+              style="text-decoration: none; color: white"
+              >Abbrechen</a
+            >
           </div>
         </div>
       </main>
@@ -200,6 +207,9 @@
           plz !== "" &&
           ort !== ""
         ) {
+          sessionStorage.setItem("firstName", firstName);
+          sessionStorage.setItem("lastName", lastName);
+
           window.location.href = "formular-2.html";
         }
       }

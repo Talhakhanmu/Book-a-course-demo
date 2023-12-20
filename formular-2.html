@@ -13,19 +13,32 @@
     <form action="EndPage.html" onsubmit="return false">
       <main>
         <div class="feld">
-          <label class="uberschriften" for="email">E-Mail-Adresse:</label>
+          <!-- email adress error -->
+          <div class="flex-box">
+            <div>
+              <label class="uberschriften" for="email">E-Mail-Adresse:</label>
+            </div>
+            <div class="blend error" id="emailError">
+              &#9888; E-Mail-Adresse ungültig
+            </div>
+          </div>
           <input
             class="felder"
             type="email"
             id="email"
             name="email"
             placeholder="example@example.com"
+            oninput="validateEmail()"
           />
-          <div class="blend error" id="emailError">
-            &#9888; Please enter a valid email address
+          <!-- telephone nummer error -->
+          <div class="flex-box">
+            <div>
+              <label class="uberschriften" for="phone">Telefon:</label>
+            </div>
+            <div class="blend error" id="phoneError">
+              &#9888; Telefonnummer ungültig
+            </div>
           </div>
-
-          <label class="uberschriften" for="phone">Telefonnummer:</label>
           <input
             class="felder"
             type="tel"
@@ -33,9 +46,6 @@
             name="phone"
             placeholder="123-456-7890"
           />
-          <div class="blend error" id="phoneError">
-            &#9888; Please enter a valid phone number
-          </div>
 
           <label for="subscribeCheckbox">
             <div class="uberschriften">
@@ -67,11 +77,13 @@
             Absenden
           </button>
 
-          <button class="Button-Cancle" id="button-1">
-            <a href="index.html" style="text-decoration: none; color: white"
-              >Abbrechen</a
-            >
-          </button>
+          <a
+            class="Button-Cancle"
+            id="button-1"
+            href="index.html"
+            style="text-decoration: none; color: white"
+            >Abbrechen</a
+          >
         </div>
       </main>
     </form>

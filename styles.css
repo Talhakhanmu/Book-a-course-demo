@@ -141,7 +141,7 @@ body {
   background: #fd6f3c;
   left: 23px;
   bottom: 17px;
-  box-shadow: 0 4px 8px rgb(255, 81, 0);
+  box-shadow: 0 4px 8px rgb(109, 35, 0);
   color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: Inter;
@@ -149,7 +149,17 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  box-sizing: border-box;
+  border-color: #000;
+  cursor: pointer;
+  border: 2px solid #994000; /* Add a darker border */
 }
+
+.jetzt-bewerben:hover {
+  background: #e65a29; /* Change the background color on hover */
+  box-shadow: 0 6px 12px rgb(109, 35, 0); /* Adjust the box shadow on hover */
+}
+
 .button {
   width: 291px;
   height: 90px;
@@ -204,6 +214,10 @@ body {
   font-weight: 700;
   line-height: normal;
 }
+.Button-endpage:hover {
+  background: #114654;
+  box-shadow: 0 6px 12px rgb(255, 81, 0);
+}
 
 .button-endpage-box {
   width: 100%;
@@ -219,7 +233,7 @@ body {
 
 .felder {
   display: flex;
-  height: 20px;
+  height: 30px;
   padding: 0px 0px;
   align-items: center;
   gap: 10px;
@@ -227,6 +241,7 @@ body {
   border-radius: 4px;
   border: 1px solid #909090;
   background: #fffcfc;
+  font-size: large;
 }
 
 .div-form {
@@ -276,6 +291,11 @@ body {
   margin-top: 50px;
   cursor: pointer;
 }
+
+.Button-formpage:hover {
+  background: #114654; /* Change the background color on hover */
+  box-shadow: 0 6px 12px rgb(255, 81, 0); /* Adjust the box shadow on hover */
+}
 .Button-Cancle {
   width: 100%;
   max-width: 1000px;
@@ -297,6 +317,13 @@ body {
   font-weight: 700;
   line-height: normal;
   margin-top: 25px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid #990000; /* Add a darker border */
+}
+.Button-Cancle:hover {
+  background: #d80000; /* Change the background color on hover */
+  box-shadow: 0 6px 12px rgb(255, 81, 0); /* Adjust the box shadow on hover */
 }
 
 .error-feld {
@@ -311,9 +338,9 @@ body {
 .uberschriften {
   display: block;
   align-self: stretch;
-  color: #000000;
+  color: #ffffff;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -327,9 +354,10 @@ body {
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: normal;
-  margin-top: 20px;
+  margin-left: 10px;
+  margin-top: 22px;
 }
 .feld {
   display: flex;
@@ -338,8 +366,18 @@ body {
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 40px;
-  background-color: #ffffff55;
+  background-color: #ffffff24;
   padding: 10%;
   box-shadow: 0 4px 8px rgb(105, 105, 105);
   border-radius: 10px;
+}
+.flex-box {
+  display: flex;
+  flex-direction: row;
+}
+input::placeholder {
+  font: 1.25rem/3 sans-serif;
+}
+textarea::placeholder {
+  font: 1.25rem/3 sans-serif;
 }

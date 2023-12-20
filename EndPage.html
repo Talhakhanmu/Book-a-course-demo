@@ -12,7 +12,7 @@
     </header>
     <main>
       <div class="content-page2">
-        <div class="Succesful">Danke, Sie sind jetzt registriert.</div>
+        <div class="Succesful"></div>
         <div class="button-endpage-box">
           <button class="Button-endpage" id="button-3">
             <a href="index.html" style="text-decoration: none; color: white"
@@ -22,6 +22,12 @@
         </div>
       </div>
     </main>
-    <script src="main.js"></script>
+    <script>
+      let msg = document.querySelector(".Succesful");
+      let firstName = sessionStorage.getItem("firstName");
+      let lastName = sessionStorage.getItem("lastName");
+      msg.innerText =
+        "Danke! " + firstName + " " + lastName + " Sie sind jetzt Registriert.";
+    </script>
   </body>
 </html>
